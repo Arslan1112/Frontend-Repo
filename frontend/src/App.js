@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.REACT_APP_BACKEND_URL || 'https://backend-repo-production-7744.up.railway.app';
 
 // Platform icon mapping
 const getPlatformIcon = (platform) => {
