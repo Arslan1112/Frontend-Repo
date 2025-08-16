@@ -169,7 +169,7 @@ function App() {
                 <Download className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-white">ZenoVid</h1>
+                <h1 className="text-2xl font-bold text-white">ArslanVid</h1>
                 <p className="text-purple-200 text-sm">Download videos without watermarks</p>
               </div>
             </div>
@@ -476,7 +476,7 @@ function App() {
         <div className="container mx-auto px-4 py-6">
           <div className="text-center text-purple-200">
             <p className="text-sm">
-              © 2025 ZenoVid - Download videos responsibly and respect creators' rights
+              © 2025 ArslanVid - Download videos responsibly and respect creators' rights
             </p>
             <p className="myName">Made by Arslan</p>
           </div>
