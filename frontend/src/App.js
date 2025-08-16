@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AdBanner from './AdBanner';
 import { Button } from './components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card';
 import { Input } from './components/ui/input';
@@ -470,7 +471,7 @@ function App() {
           </Card>
         </div>
       </div>
-
+      <AdBanner/>
       {/* Footer */}
       <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 mt-16">
         <div className="container mx-auto px-4 py-6">
