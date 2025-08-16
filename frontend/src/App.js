@@ -478,6 +478,7 @@ function App() {
             <p className="text-sm">
               © 2025 ZenoVid - Download videos responsibly and respect creators' rights
             </p>
+            <p className="myName">Made by Arslan</p>
           </div>
         </div>
       </footer>
