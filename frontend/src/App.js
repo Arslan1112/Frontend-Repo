@@ -476,7 +476,7 @@ function App() {
         <div className="container mx-auto px-4 py-6">
           <div className="text-center text-purple-200">
             <p className="text-sm">
-              © 2025 VideoSnap - Download videos responsibly and respect creators' rights
+              © 2025 ZenoVid - Download videos responsibly and respect creators' rights
             </p>
           </div>
         </div>
