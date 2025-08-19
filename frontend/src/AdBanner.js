@@ -5,7 +5,7 @@ const AdBanner = () => {
   const adRef = useRef(null);
 
   useEffect(() => {
-    // AdSense script’ini ekle (sadece bir kez)
+    // AdSense script’ini bir gezek goş
     if (!document.querySelector("script[src*='adsbygoogle.js']")) {
       const script = document.createElement("script");
       script.src =
@@ -18,13 +18,17 @@ const AdBanner = () => {
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (e) {
-      console.error("AdSense yüklenemedi:", e);
+      console.error("AdSense ýüklenmedi:", e);
     }
 
-    // Reklam divini gözlemle
+    // Observer: diňe içi dolananda ýazygy gizlet
     const observer = new MutationObserver(() => {
-      if (adRef.current && adRef.current.innerHTML.trim() !== "") {
-        setLoading(false); // reklam geldi → yazıyı kaldır
+      if (
+        adRef.current &&
+        adRef.current.innerHTML.trim() !== "" &&
+        !/^\s*$/.test(adRef.current.innerText)
+      ) {
+        setLoading(false); // diňe hakyky mazmun bar bolsa
       }
     });
 
