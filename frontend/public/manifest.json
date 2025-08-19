@@ -4,7 +4,7 @@
   "description": "ArslanVid PWA program",
   "start_url": "/",
   "id": "/",
-  "launch_handler": {}
+  "launch_handler": {},
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",
