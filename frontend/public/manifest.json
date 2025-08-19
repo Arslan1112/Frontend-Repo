@@ -5,6 +5,7 @@
   "start_url": "/",
   "id": "/",
   "launch_handler": {},
+  "orientation": "portrait",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",
