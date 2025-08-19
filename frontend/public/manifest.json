@@ -9,6 +9,13 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",
+  "screenshots": [
+    {
+      "src": "/icons/screenshot1.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ]
   "icons": [
     {
       "src": "/icons/icon-192.png",
