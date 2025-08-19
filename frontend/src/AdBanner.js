@@ -1,25 +1,57 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const AdBanner = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     // AdSense script’ini ekle (sadece bir kez)
-    const script = document.createElement("script");
-    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7549160788448307";
-    script.async = true;
-    script.crossOrigin = "anonymous";
-    document.body.appendChild(script);
+    if (!document.querySelector("script[src*='adsbygoogle.js']")) {
+      const script = document.createElement("script");
+      script.src =
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7549160788448307";
+      script.async = true;
+      script.crossOrigin = "anonymous";
+      document.body.appendChild(script);
+    }
 
-    // Reklam alanını çalıştır
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.error("AdSense yüklenemedi:", e);
+    }
+
+    // 4 saniye sonra yazıyı kaldır
+    const timer = setTimeout(() => setLoading(false), 4000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <ins className="adsbygoogle"
-         style={{ display: "block" }}
-         data-ad-client="ca-pub-7549160788448307"
-         data-ad-slot="3099647840"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+    <div style={{ textAlign: "center", minHeight: "100px", position: "relative" }}>
+      {loading && (
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%,-50%)",
+            color: "gray",
+            fontSize: "14px",
+          }}
+        >
+          Ad loading...
+        </div>
+      )}
+
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-client="ca-pub-7549160788448307"
+        data-ad-slot="3099647840"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+    </div>
   );
 };
 
