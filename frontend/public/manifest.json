@@ -6,6 +6,8 @@
   "id": "/",
   "launch_handler": {},
   "orientation": "portrait",
+  "categories": ["utilities", "productivity"],
+  "dir": "ltr",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",
