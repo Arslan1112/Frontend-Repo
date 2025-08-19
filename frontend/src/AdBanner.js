@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const AdBanner = () => {
   const [loading, setLoading] = useState(true);
+  const adRef = useRef(null);
 
   useEffect(() => {
     // AdSense script’ini ekle (sadece bir kez)
@@ -20,10 +21,18 @@ const AdBanner = () => {
       console.error("AdSense yüklenemedi:", e);
     }
 
-    // 4 saniye sonra yazıyı kaldır
-    const timer = setTimeout(() => setLoading(false), 4000);
+    // Reklam divini gözlemle
+    const observer = new MutationObserver(() => {
+      if (adRef.current && adRef.current.innerHTML.trim() !== "") {
+        setLoading(false); // reklam geldi → yazıyı kaldır
+      }
+    });
 
-    return () => clearTimeout(timer);
+    if (adRef.current) {
+      observer.observe(adRef.current, { childList: true, subtree: true });
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -44,6 +53,7 @@ const AdBanner = () => {
       )}
 
       <ins
+        ref={adRef}
         className="adsbygoogle"
         style={{ display: "block" }}
         data-ad-client="ca-pub-7549160788448307"
