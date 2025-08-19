@@ -1,6 +1,6 @@
 {
   "name": "ArslanVid",
-  "short_name": "App",
+  "short_name": "ArslanVid",
   "description": "ArslanVid PWA program",
   "start_url": "/",
   "display": "standalone",
