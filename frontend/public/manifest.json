@@ -3,7 +3,6 @@
   "short_name": "ArslanVid",
   "description": "ArslanVid PWA program",
   "start_url": "/",
-  "id": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",
