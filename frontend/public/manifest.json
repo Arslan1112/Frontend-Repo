@@ -4,20 +4,9 @@
   "description": "ArslanVid PWA program",
   "start_url": "/",
   "id": "/",
-  "launch_handler": {},
-  "orientation": "portrait",
-  "categories": ["utilities", "productivity"],
-  "dir": "ltr",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",
-  "screenshots": [
-    {
-      "src": "/20250820_093846_0000.png",
-      "sizes": "540x720",
-      "type": "image/png"
-    }
-  ]
   "icons": [
     {
       "src": "/20250820_093846_0000.png",
