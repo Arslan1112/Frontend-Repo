@@ -2,7 +2,6 @@ const CACHE_NAME = "ArslanVid-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/favicon.ico",
   "/static/js/bundle.js",
   "/manifest.json"
 ];
